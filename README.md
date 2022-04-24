@@ -2,6 +2,8 @@
 
 A wrapper of [Processing](https://processing.org) for scarpet
 
+If you need help, feel free to DM me on Discord: `replaceitem#9118`
+
 ## Values
 
 This extension adds these new scarpet values:
