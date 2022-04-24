@@ -57,6 +57,7 @@ To be called when done drawing.
 
 See the [2D Primitives](https://processing.org/reference/#shape) section in the processing reference. (The scarpet functions have `draw_` prefixed with the processing function names)
 
+#### `draw_background(graphics, color)`
 #### `draw_rect(graphics, a, b, c, d)`
 #### `draw_ellipse(graphics, a, b, c, d)`
 #### `draw_line(graphics, x1, y1, x2, y2)`

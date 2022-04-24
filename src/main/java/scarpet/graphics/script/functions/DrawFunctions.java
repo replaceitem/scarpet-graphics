@@ -8,6 +8,11 @@ import scarpet.graphics.script.values.PixelAccessibleValue;
 public class DrawFunctions {
 
     @ScarpetFunction
+    public void draw_background(PGraphics graphics, int color) {
+        graphics.background(color);
+    }
+
+    @ScarpetFunction
     public void draw_rect(PGraphics graphics, float a, float b, float c, float d) {
         graphics.rect(a,b,c,d);
     }
