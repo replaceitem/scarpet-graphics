@@ -4,10 +4,11 @@ A wrapper of [Processing](https://processing.org) for scarpet
 
 ## Values
 
-This extension adds two new scarpet values:
+This extension adds these new scarpet values:
 
 * `image`: Wrapper for [PImage](https://processing.org/reference/PImage.html)
 * `graphics`: Wrapper for [PGraphics](https://processing.org/reference/PGraphics.html), extends `image` value (meaning it can be used in the same way `image` can)
+* `font`: Wrapper for [PFont](https://processing.org/reference/PFont.html)
 
 Colors are handled using numbers (0xRRGGBBAA in hex), but can be constructed from RGB and HSB using the `color` function.
 
@@ -62,6 +63,7 @@ See the [2D Primitives](https://processing.org/reference/#shape) section in the 
 #### `draw_ellipse(graphics, a, b, c, d)`
 #### `draw_line(graphics, x1, y1, x2, y2)`
 #### `draw_image(graphics, a, b, c, d)`
+#### `draw_text(graphics, text, x, y)`
 
 ### Mode functions
 
@@ -94,3 +96,8 @@ Depending on the `color_mode()` set, v1,v2,v3 are either r,g,b or h,s,b values
 #### `stroke_weight(graphics, weight)`
 #### `smooth(graphics)`
 #### `no_smooth(graphics)`
+#### `font_list()` (Equivalent to PFont.list() in processing)
+#### `text_font(graphics, font)`
+#### `text_size(graphics, size)`
+#### `create_font(graphics, name, size, smooth?)`
+#### `text_align(graphics, alignX, alignY)`
