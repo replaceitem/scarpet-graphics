@@ -1,8 +1,16 @@
 package scarpet.graphics.script.functions;
 
 import carpet.script.annotation.ScarpetFunction;
+import carpet.script.value.ListValue;
+import carpet.script.value.StringValue;
+import carpet.script.value.Value;
+import processing.core.PFont;
 import processing.core.PGraphics;
+import scarpet.graphics.mixins.PGraphicsAccessor;
 
+import java.util.Arrays;
+
+import static scarpet.graphics.ConstantsUtil.*;
 @SuppressWarnings("unused")
 public class UtilFunctions {
     @ScarpetFunction
@@ -43,5 +51,30 @@ public class UtilFunctions {
     @ScarpetFunction
     public void no_smooth(PGraphics graphics) {
         graphics.noSmooth();
+    }
+
+    @ScarpetFunction
+    public Value font_list() {
+        return ListValue.wrap(Arrays.stream(PFont.list()).map(StringValue::new));
+    }
+
+    @ScarpetFunction
+    public void text_font(PGraphics graphics, PFont font) {
+        graphics.textFont(font);
+    }
+
+    @ScarpetFunction
+    public void text_size(PGraphics graphics, float size) {
+        graphics.textSize(size);
+    }
+
+    @ScarpetFunction
+    public PFont create_font(PGraphics graphics, String name, float size, boolean smooth) {
+        return ((PGraphicsAccessor) graphics).callCreateFont(name, size, smooth, null);
+    }
+
+    @ScarpetFunction
+    public void text_align(PGraphics graphics, String alignX, String alignY) {
+        graphics.textAlign(getTextAlignX(alignX),getTextAlignY(alignY));
     }
 }

@@ -32,4 +32,19 @@ public class ConstantsUtil {
         if(mode.equalsIgnoreCase("CORNERS")) return PConstants.CORNERS;
         throw new InternalExpressionException("Invalid rect mode: " + mode);
     }
+
+    public static int getTextAlignX(String mode) {
+        if(mode.equalsIgnoreCase("LEFT")) return PConstants.LEFT;
+        if(mode.equalsIgnoreCase("CENTER")) return PConstants.CENTER;
+        if(mode.equalsIgnoreCase("RIGHT")) return PConstants.RIGHT;
+        throw new InternalExpressionException("Invalid X text align: " + mode);
+    }
+
+    public static int getTextAlignY(String mode) {
+        if(mode.equalsIgnoreCase("TOP")) return PConstants.TOP;
+        if(mode.equalsIgnoreCase("CENTER")) return PConstants.CENTER;
+        if(mode.equalsIgnoreCase("BOTTOM")) return PConstants.BOTTOM;
+        if(mode.equalsIgnoreCase("BASELINE")) return PConstants.BASELINE;
+        throw new InternalExpressionException("Invalid Y text align: " + mode);
+    }
 }

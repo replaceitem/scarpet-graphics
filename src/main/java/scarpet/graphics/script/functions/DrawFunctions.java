@@ -31,4 +31,9 @@ public class DrawFunctions {
     public void draw_image(PGraphics graphics, PixelAccessibleValue<?> image, float x, float y, float w, float h) {
         graphics.image(image.getGraphics(), x, y, w, h);
     }
+
+    @ScarpetFunction
+    public void draw_text(PGraphics graphics, String text, float x, float y) {
+        graphics.text(text, x, y);
+    }
 }

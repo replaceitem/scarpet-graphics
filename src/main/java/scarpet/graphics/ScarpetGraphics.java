@@ -14,12 +14,14 @@ import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.command.ServerCommandSource;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import processing.core.PFont;
 import processing.core.PGraphics;
 import processing.core.PImage;
 import scarpet.graphics.script.functions.DrawFunctions;
 import scarpet.graphics.script.functions.GraphicsFunctions;
 import scarpet.graphics.script.functions.ModeFunctions;
 import scarpet.graphics.script.functions.UtilFunctions;
+import scarpet.graphics.script.values.FontValue;
 import scarpet.graphics.script.values.GraphicsValue;
 import scarpet.graphics.script.values.ImageValue;
 import scarpet.graphics.script.values.PixelAccessibleValue;
@@ -41,9 +43,11 @@ public class ScarpetGraphics implements CarpetExtension, ModInitializer {
 		
 		SimpleTypeConverter.registerType(ImageValue.class, PImage.class, ImageValue::getGraphics, "image");
 		SimpleTypeConverter.registerType(GraphicsValue.class, PGraphics.class, GraphicsValue::getGraphics, "graphics");
+		SimpleTypeConverter.registerType(FontValue.class, PFont.class, FontValue::getFont, "font");
 		
 		OutputConverter.registerToValue(PImage.class, ImageValue::new);
 		OutputConverter.registerToValue(PGraphics.class, GraphicsValue::new);
+		OutputConverter.registerToValue(PFont.class, FontValue::new);
 
 		ValueCaster.register(PixelAccessibleValue.class, "pixel_accessible_value");
 		
