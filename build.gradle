@@ -4,10 +4,9 @@ plugins {
 }
 
 repositories {
-	maven {
-		url 'https://masa.dy.fi/maven'
-	}
+	// maven { url 'https://masa.dy.fi/maven' }
 	mavenCentral()
+	maven { url 'https://jitpack.io' }
 }
 
 sourceCompatibility = JavaVersion.VERSION_17
@@ -21,7 +20,8 @@ dependencies {
 	minecraft "com.mojang:minecraft:${project.minecraft_version}"
 	mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
 	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
-	modImplementation "carpet:fabric-carpet:${project.carpet_minecraft_version}-${project.carpet_core_version}"
+	// modImplementation "carpet:fabric-carpet:${project.carpet_minecraft_version}-${project.carpet_core_version}"
+	modImplementation "com.github.gnembon:fabric-carpet:1.4.72"
 	
 	modImplementation("org.processing:core:3.3.7") {
 		exclude (group: "org.jogamp.gluegen")
