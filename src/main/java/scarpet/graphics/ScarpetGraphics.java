@@ -8,10 +8,8 @@ import carpet.script.annotation.OutputConverter;
 import carpet.script.annotation.SimpleTypeConverter;
 import carpet.script.annotation.ValueCaster;
 import carpet.script.value.NumericValue;
-import com.mojang.brigadier.CommandDispatcher;
 import net.fabricmc.api.ModInitializer;
 import net.minecraft.server.MinecraftServer;
-import net.minecraft.server.command.ServerCommandSource;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import processing.core.PFont;
@@ -64,11 +62,6 @@ public class ScarpetGraphics implements CarpetExtension, ModInitializer {
 
 	@Override
 	public void onServerClosed(MinecraftServer server) {
-		
-	}
-
-	@Override
-	public void registerCommands(CommandDispatcher<ServerCommandSource> dispatcher) {
 		
 	}
 

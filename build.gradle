@@ -27,7 +27,10 @@ dependencies {
 		exclude (group: "org.jogamp.gluegen")
 		exclude (group: "org.jogamp.jogl")
 	}
-	include 'org.processing:core:3.3.7'
+	include ('org.processing:core:3.3.7') {
+		exclude (group: "org.jogamp.gluegen")
+		exclude (group: "org.jogamp.jogl")
+	}
 }
 
 processResources {
