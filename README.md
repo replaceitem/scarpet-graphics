@@ -1,6 +1,8 @@
 # scarpet-graphics
 
-A wrapper of [Processing](https://processing.org) for scarpet
+A wrapper of [Processing](https://processing.org) for [scarpet](https://github.com/gnembon/fabric-carpet/wiki/Scarpet)
+
+This can also be used with [Discarpet](https://modrinth.com/mod/discarpet) to send the created images via Discord.
 
 If you need help, feel free to DM me on Discord: `replaceitem#9118`
 
