@@ -1,6 +1,7 @@
 plugins {
 	id 'fabric-loom' version '0.12-SNAPSHOT'
 	id 'maven-publish'
+	id "com.modrinth.minotaur" version "2.+"
 }
 
 repositories {
@@ -53,6 +54,23 @@ jar {
 	from("LICENSE") {
 		rename { "${it}_${project.archivesBaseName}"}
 	}
+}
+
+import com.modrinth.minotaur.dependencies.ModDependency
+
+modrinth {
+	token = System.getenv("MODRINTH_TOKEN")
+	projectId = "Vr7HAIVL"
+	versionNumber = project.mod_version
+	versionType = "beta"
+	uploadFile = remapJar
+	gameVersions = ["1.19.1"]
+	loaders = ["fabric"]
+	dependencies = [
+			// discarpet
+	        new ModDependency("m00L1GVJ" ,"optional")
+	]
+	syncBodyFrom = rootProject.file("README.md").text
 }
 
 // configure the maven publication
