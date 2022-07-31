@@ -3,7 +3,8 @@
   "package": "scarpet.graphics.mixins",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
-    "PGraphicsAccessor"
+    "PGraphicsAccessor",
+    "PGraphicsMixin"
   ],
   "client": [
   ],
