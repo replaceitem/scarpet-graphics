@@ -34,7 +34,7 @@ public class UtilFunctions {
     }
 
     @ScarpetFunction
-    public void no_stoke(PGraphics graphics) {
+    public void no_stroke(PGraphics graphics) {
         graphics.noStroke();
     }
 
