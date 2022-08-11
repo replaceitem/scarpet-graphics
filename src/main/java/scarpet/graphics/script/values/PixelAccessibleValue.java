@@ -6,6 +6,8 @@ import net.minecraft.nbt.NbtElement;
 import processing.core.PImage;
 import scarpet.graphics.PixelPos;
 
+import java.awt.*;
+
 public abstract class PixelAccessibleValue<T extends PImage> extends Value {
     protected final T graphics;
 
@@ -15,6 +17,10 @@ public abstract class PixelAccessibleValue<T extends PImage> extends Value {
 
     public T getGraphics() {
         return graphics;
+    }
+    
+    public Image getNativeImage() {
+        return graphics.getImage();
     }
 
     protected Value getProperty(String property) {
