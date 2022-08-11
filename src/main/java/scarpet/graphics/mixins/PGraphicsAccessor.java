@@ -7,6 +7,6 @@ import processing.core.PGraphics;
 
 @Mixin(PGraphics.class)
 public interface PGraphicsAccessor {
-    @Invoker
+    @Invoker(remap = false)
     PFont callCreateFont(String name, float size, boolean smooth, char[] charset);
 }
