@@ -23,14 +23,8 @@ dependencies {
 	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
 	modImplementation "carpet:fabric-carpet:${project.carpet_minecraft_version}-${project.carpet_core_version}"
 	
-	modImplementation("org.processing:core:3.3.7") {
-		exclude (group: "org.jogamp.gluegen")
-		exclude (group: "org.jogamp.jogl")
-	}
-	include ('org.processing:core:3.3.7') {
-		exclude (group: "org.jogamp.gluegen")
-		exclude (group: "org.jogamp.jogl")
-	}
+	api("org.processing:core:3.3.7")
+	include ('org.processing:core:3.3.7')
 }
 
 processResources {
