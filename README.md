@@ -1,10 +1,10 @@
 # scarpet-graphics
 
+[![Discord](https://img.shields.io/badge/Discord-7289DA?logo=discord&logoColor=white)](https://discord.gg/etTDQAVSgt)
+
 A wrapper of [Processing](https://processing.org) for [scarpet](https://github.com/gnembon/fabric-carpet/wiki/Scarpet)
 
 This can also be used with [Discarpet](https://modrinth.com/mod/discarpet) to send the created images via Discord.
-
-If you need help, feel free to DM me on Discord: `replaceitem#9118`
 
 ## Values
 
