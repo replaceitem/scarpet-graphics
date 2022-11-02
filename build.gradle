@@ -64,6 +64,7 @@ modrinth {
 			// discarpet
 	        new ModDependency("m00L1GVJ" ,"optional")
 	]
+	changelog = rootProject.file("changelog.md").text
 	syncBodyFrom = rootProject.file("README.md").text
 }
 
