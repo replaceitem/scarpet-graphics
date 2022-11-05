@@ -1,9 +1,9 @@
-package scarpet.graphics.script.functions;
+package net.replaceitem.scarpet.graphics.script.functions;
 
 import carpet.script.annotation.ScarpetFunction;
 import processing.core.PGraphics;
 
-import static scarpet.graphics.ConstantsUtil.*;
+import static net.replaceitem.scarpet.graphics.ConstantsUtil.*;
 
 @SuppressWarnings("unused")
 public class ModeFunctions {

@@ -1,12 +1,12 @@
-package scarpet.graphics.script.functions;
+package net.replaceitem.scarpet.graphics.script.functions;
 
 import carpet.script.annotation.ScarpetFunction;
+import net.replaceitem.scarpet.graphics.script.values.PixelAccessibleValue;
 import processing.awt.PGraphicsJava2D;
 import processing.core.PConstants;
 import processing.core.PGraphics;
 import processing.core.PImage;
-import scarpet.graphics.ScarpetGraphics;
-import scarpet.graphics.script.values.PixelAccessibleValue;
+import net.replaceitem.scarpet.graphics.ScarpetGraphics;
 
 import javax.imageio.ImageIO;
 import java.io.File;

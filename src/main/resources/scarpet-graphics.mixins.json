@@ -1,6 +1,6 @@
 {
   "required": true,
-  "package": "scarpet.graphics.mixins",
+  "package": "net.replaceitem.scarpet.graphics.mixins",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
     "PGraphicsAccessor",

@@ -1,4 +1,4 @@
-package scarpet.graphics.script.values;
+package net.replaceitem.scarpet.graphics.script.values;
 
 import carpet.script.value.Value;
 import processing.core.PImage;

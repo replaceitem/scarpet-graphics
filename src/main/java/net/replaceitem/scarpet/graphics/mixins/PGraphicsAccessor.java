@@ -1,4 +1,4 @@
-package scarpet.graphics.mixins;
+package net.replaceitem.scarpet.graphics.mixins;
 
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.gen.Invoker;

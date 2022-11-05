@@ -1,4 +1,4 @@
-package scarpet.graphics.script.functions;
+package net.replaceitem.scarpet.graphics.script.functions;
 
 import carpet.script.annotation.ScarpetFunction;
 import carpet.script.value.ListValue;
@@ -6,11 +6,11 @@ import carpet.script.value.StringValue;
 import carpet.script.value.Value;
 import processing.core.PFont;
 import processing.core.PGraphics;
-import scarpet.graphics.mixins.PGraphicsAccessor;
+import net.replaceitem.scarpet.graphics.mixins.PGraphicsAccessor;
 
 import java.util.Arrays;
 
-import static scarpet.graphics.ConstantsUtil.*;
+import static net.replaceitem.scarpet.graphics.ConstantsUtil.*;
 @SuppressWarnings("unused")
 public class UtilFunctions {
     @ScarpetFunction

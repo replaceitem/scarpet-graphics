@@ -1,10 +1,10 @@
-package scarpet.graphics.script.values;
+package net.replaceitem.scarpet.graphics.script.values;
 
 import carpet.script.value.NumericValue;
 import carpet.script.value.Value;
 import net.minecraft.nbt.NbtElement;
+import net.replaceitem.scarpet.graphics.PixelPos;
 import processing.core.PImage;
-import scarpet.graphics.PixelPos;
 
 import java.awt.*;
 

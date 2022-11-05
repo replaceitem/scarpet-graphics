@@ -1,8 +1,8 @@
-package scarpet.graphics.script.functions;
+package net.replaceitem.scarpet.graphics.script.functions;
 
 import carpet.script.annotation.ScarpetFunction;
+import net.replaceitem.scarpet.graphics.script.values.PixelAccessibleValue;
 import processing.core.PGraphics;
-import scarpet.graphics.script.values.PixelAccessibleValue;
 
 @SuppressWarnings("unused")
 public class DrawFunctions {

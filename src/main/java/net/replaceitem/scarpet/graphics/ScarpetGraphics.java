@@ -1,4 +1,4 @@
-package scarpet.graphics;
+package net.replaceitem.scarpet.graphics;
 
 import carpet.CarpetExtension;
 import carpet.CarpetServer;
@@ -10,22 +10,22 @@ import carpet.script.annotation.ValueCaster;
 import carpet.script.value.NumericValue;
 import net.fabricmc.api.ModInitializer;
 import net.minecraft.server.MinecraftServer;
+import net.replaceitem.scarpet.graphics.script.functions.GraphicsFunctions;
+import net.replaceitem.scarpet.graphics.script.functions.ModeFunctions;
+import net.replaceitem.scarpet.graphics.script.functions.UtilFunctions;
+import net.replaceitem.scarpet.graphics.script.values.FontValue;
+import net.replaceitem.scarpet.graphics.script.values.GraphicsValue;
+import net.replaceitem.scarpet.graphics.script.values.PixelAccessibleValue;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import processing.core.PFont;
 import processing.core.PGraphics;
 import processing.core.PImage;
-import scarpet.graphics.script.functions.DrawFunctions;
-import scarpet.graphics.script.functions.GraphicsFunctions;
-import scarpet.graphics.script.functions.ModeFunctions;
-import scarpet.graphics.script.functions.UtilFunctions;
-import scarpet.graphics.script.values.FontValue;
-import scarpet.graphics.script.values.GraphicsValue;
-import scarpet.graphics.script.values.ImageValue;
-import scarpet.graphics.script.values.PixelAccessibleValue;
+import net.replaceitem.scarpet.graphics.script.functions.DrawFunctions;
+import net.replaceitem.scarpet.graphics.script.values.ImageValue;
 
 public class ScarpetGraphics implements CarpetExtension, ModInitializer {
-	public static final Logger LOGGER = LogManager.getLogger("scarpet/graphics");
+	public static final Logger LOGGER = LogManager.getLogger("net/replaceitem/scarpet/graphics");
 
 	@Override
 	public void onInitialize() {

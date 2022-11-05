@@ -1,4 +1,4 @@
-package scarpet.graphics;
+package net.replaceitem.scarpet.graphics;
 
 import carpet.script.exception.InternalExpressionException;
 import processing.core.PConstants;

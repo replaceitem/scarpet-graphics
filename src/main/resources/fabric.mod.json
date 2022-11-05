@@ -19,7 +19,7 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-    	"scarpet.graphics.ScarpetGraphics"
+      "net.replaceitem.scarpet.graphics.ScarpetGraphics"
     ]
   },
   "mixins": [

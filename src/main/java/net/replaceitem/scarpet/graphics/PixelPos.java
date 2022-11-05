@@ -1,4 +1,4 @@
-package scarpet.graphics;
+package net.replaceitem.scarpet.graphics;
 
 import carpet.script.value.ListValue;
 import carpet.script.value.NumericValue;
