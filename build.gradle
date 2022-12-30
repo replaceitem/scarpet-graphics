@@ -61,8 +61,10 @@ modrinth {
 	gameVersions = ["1.19.1", "1.19.2"]
 	loaders = ["fabric"]
 	dependencies = [
+			// carpet
+			new ModDependency("TQTTVgYE", "required"),
 			// discarpet
-	        new ModDependency("m00L1GVJ" ,"optional")
+			new ModDependency("m00L1GVJ", "optional")
 	]
 	changelog = rootProject.file("changelog.md").text
 	syncBodyFrom = rootProject.file("README.md").text
