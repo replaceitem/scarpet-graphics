@@ -3,7 +3,10 @@ package net.replaceitem.scarpet.graphics.script.values;
 import carpet.script.value.NumericValue;
 import carpet.script.value.Value;
 import net.minecraft.nbt.NbtElement;
+import net.minecraft.nbt.NbtString;
+import net.minecraft.registry.DynamicRegistryManager;
 import net.replaceitem.scarpet.graphics.PixelPos;
+import org.jetbrains.annotations.NotNull;
 import processing.core.PImage;
 
 import java.awt.*;
@@ -64,7 +67,7 @@ public abstract class PixelAccessibleValue<T extends PImage> extends Value {
     }
 
     @Override
-    public NbtElement toTag(boolean force) {
-        return null;
+    public @NotNull NbtElement toTag(boolean force, DynamicRegistryManager regs) {
+        return NbtString.of(getString());
     }
 }

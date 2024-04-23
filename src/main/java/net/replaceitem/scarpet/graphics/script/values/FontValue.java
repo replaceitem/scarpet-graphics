@@ -2,6 +2,9 @@ package net.replaceitem.scarpet.graphics.script.values;
 
 import carpet.script.value.Value;
 import net.minecraft.nbt.NbtElement;
+import net.minecraft.nbt.NbtString;
+import net.minecraft.registry.DynamicRegistryManager;
+import org.jetbrains.annotations.NotNull;
 import processing.core.PFont;
 
 public class FontValue extends Value {
@@ -32,7 +35,7 @@ public class FontValue extends Value {
     }
 
     @Override
-    public NbtElement toTag(boolean force) {
-        return null;
+    public @NotNull NbtElement toTag(boolean force, DynamicRegistryManager regs) {
+        return NbtString.of(getString());
     }
 }
