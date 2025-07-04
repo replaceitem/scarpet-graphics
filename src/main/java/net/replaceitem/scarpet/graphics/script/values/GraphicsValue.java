@@ -1,5 +1,6 @@
 package net.replaceitem.scarpet.graphics.script.values;
 
+import org.jetbrains.annotations.NotNull;
 import processing.core.PGraphics;
 
 public class GraphicsValue extends PixelAccessibleValue<PGraphics> {
@@ -9,7 +10,7 @@ public class GraphicsValue extends PixelAccessibleValue<PGraphics> {
     }
 
     @Override
-    public String getTypeString() {
+    public @NotNull String getTypeString() {
         return "graphics";
     }
 }

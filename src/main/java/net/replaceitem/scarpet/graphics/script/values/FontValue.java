@@ -20,12 +20,12 @@ public class FontValue extends Value {
     }
     
     @Override
-    public String getString() {
+    public @NotNull String getString() {
         return font.getName();
     }
 
     @Override
-    public String getTypeString() {
+    public @NotNull String getTypeString() {
         return "font";
     }
 

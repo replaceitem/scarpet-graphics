@@ -43,7 +43,7 @@ public abstract class PixelAccessibleValue<T extends PImage> extends Value {
     }
 
     @Override
-    public Value in(Value value1) {
+    public @NotNull Value in(Value value1) {
         PixelPos pixelPos = PixelPos.ofValue(value1);
         if(pixelPos != null) {
             return NumericValue.of(getColorAt(pixelPos));
@@ -52,7 +52,7 @@ public abstract class PixelAccessibleValue<T extends PImage> extends Value {
     }
 
     @Override
-    public String getString() {
+    public @NotNull String getString() {
         return getTypeString();
     }
 
@@ -65,6 +65,7 @@ public abstract class PixelAccessibleValue<T extends PImage> extends Value {
     public boolean getBoolean() {
         return true;
     }
+
 
     @Override
     public @NotNull NbtElement toTag(boolean force, DynamicRegistryManager regs) {

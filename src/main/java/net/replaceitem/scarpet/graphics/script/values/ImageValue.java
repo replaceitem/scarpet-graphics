@@ -1,6 +1,7 @@
 package net.replaceitem.scarpet.graphics.script.values;
 
 import carpet.script.value.Value;
+import org.jetbrains.annotations.NotNull;
 import processing.core.PImage;
 
 public class ImageValue extends PixelAccessibleValue<PImage> {
@@ -9,12 +10,12 @@ public class ImageValue extends PixelAccessibleValue<PImage> {
     }
 
     @Override
-    public String getTypeString() {
+    public @NotNull String getTypeString() {
         return "image";
     }
 
     @Override
-    public Value deepcopy() {
+    public @NotNull Value deepcopy() {
         try {
             return new ImageValue((PImage) this.graphics.clone());
         } catch (CloneNotSupportedException e) {
