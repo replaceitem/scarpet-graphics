@@ -43,9 +43,9 @@ public class ScarpetGraphics implements CarpetExtension, ModInitializer {
 		SimpleTypeConverter.registerType(GraphicsValue.class, PGraphics.class, GraphicsValue::getGraphics, "graphics");
 		SimpleTypeConverter.registerType(FontValue.class, PFont.class, FontValue::getFont, "font");
 		
-		OutputConverter.registerToValue(PImage.class, ImageValue::new);
-		OutputConverter.registerToValue(PGraphics.class, GraphicsValue::new);
-		OutputConverter.registerToValue(PFont.class, FontValue::new);
+		OutputConverter.register(PImage.class, ImageValue::new);
+		OutputConverter.register(PGraphics.class, GraphicsValue::new);
+		OutputConverter.register(PFont.class, FontValue::new);
 
 		ValueCaster.register(PixelAccessibleValue.class, "pixel_accessible_value");
 		
@@ -53,20 +53,5 @@ public class ScarpetGraphics implements CarpetExtension, ModInitializer {
 		AnnotationParser.parseFunctionClass(DrawFunctions.class);
 		AnnotationParser.parseFunctionClass(ModeFunctions.class);
 		AnnotationParser.parseFunctionClass(UtilFunctions.class);
-	}
-
-	@Override
-	public void onServerLoaded(MinecraftServer server) {
-		
-	}
-
-	@Override
-	public void onServerClosed(MinecraftServer server) {
-		
-	}
-
-	@Override
-	public void scarpetApi(CarpetExpression expression) {
-		
 	}
 }

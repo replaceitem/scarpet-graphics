@@ -2,11 +2,10 @@ package net.replaceitem.scarpet.graphics.script.values;
 
 import carpet.script.value.NumericValue;
 import carpet.script.value.Value;
-import net.minecraft.nbt.NbtElement;
-import net.minecraft.nbt.NbtString;
-import net.minecraft.registry.DynamicRegistryManager;
+import net.minecraft.core.RegistryAccess;
+import net.minecraft.nbt.StringTag;
+import net.minecraft.nbt.Tag;
 import net.replaceitem.scarpet.graphics.PixelPos;
-import org.jetbrains.annotations.NotNull;
 import processing.core.PImage;
 
 import java.awt.*;
@@ -43,7 +42,7 @@ public abstract class PixelAccessibleValue<T extends PImage> extends Value {
     }
 
     @Override
-    public @NotNull Value in(Value value1) {
+    public Value in(Value value1) {
         PixelPos pixelPos = PixelPos.ofValue(value1);
         if(pixelPos != null) {
             return NumericValue.of(getColorAt(pixelPos));
@@ -52,7 +51,7 @@ public abstract class PixelAccessibleValue<T extends PImage> extends Value {
     }
 
     @Override
-    public @NotNull String getString() {
+    public String getString() {
         return getTypeString();
     }
 
@@ -68,7 +67,7 @@ public abstract class PixelAccessibleValue<T extends PImage> extends Value {
 
 
     @Override
-    public @NotNull NbtElement toTag(boolean force, DynamicRegistryManager regs) {
-        return NbtString.of(getString());
+    public Tag toTag(boolean force, RegistryAccess regs) {
+        return StringTag.valueOf(getString());
     }
 }

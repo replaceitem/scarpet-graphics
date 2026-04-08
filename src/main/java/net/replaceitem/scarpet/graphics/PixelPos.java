@@ -3,6 +3,7 @@ package net.replaceitem.scarpet.graphics;
 import carpet.script.value.ListValue;
 import carpet.script.value.NumericValue;
 import carpet.script.value.Value;
+import org.jspecify.annotations.Nullable;
 
 import java.util.List;
 
@@ -14,7 +15,8 @@ public class PixelPos {
         this.x = x;
         this.y = y;
     }
-    
+
+    @Nullable
     public static PixelPos ofValue(Value value) {
         if(!(value instanceof ListValue listValue)) return null;
         List<Value> list = listValue.getItems();

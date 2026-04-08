@@ -1,10 +1,9 @@
 package net.replaceitem.scarpet.graphics.script.values;
 
 import carpet.script.value.Value;
-import net.minecraft.nbt.NbtElement;
-import net.minecraft.nbt.NbtString;
-import net.minecraft.registry.DynamicRegistryManager;
-import org.jetbrains.annotations.NotNull;
+import net.minecraft.core.RegistryAccess;
+import net.minecraft.nbt.StringTag;
+import net.minecraft.nbt.Tag;
 import processing.core.PFont;
 
 public class FontValue extends Value {
@@ -20,12 +19,12 @@ public class FontValue extends Value {
     }
     
     @Override
-    public @NotNull String getString() {
+    public String getString() {
         return font.getName();
     }
 
     @Override
-    public @NotNull String getTypeString() {
+    public String getTypeString() {
         return "font";
     }
 
@@ -35,7 +34,7 @@ public class FontValue extends Value {
     }
 
     @Override
-    public @NotNull NbtElement toTag(boolean force, DynamicRegistryManager regs) {
-        return NbtString.of(getString());
+    public Tag toTag(boolean force, RegistryAccess regs) {
+        return StringTag.valueOf(getString());
     }
 }

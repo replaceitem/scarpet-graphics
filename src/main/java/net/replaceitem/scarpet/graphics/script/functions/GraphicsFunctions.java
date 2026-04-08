@@ -2,6 +2,7 @@ package net.replaceitem.scarpet.graphics.script.functions;
 
 import carpet.script.annotation.ScarpetFunction;
 import net.replaceitem.scarpet.graphics.script.values.PixelAccessibleValue;
+import org.jspecify.annotations.Nullable;
 import processing.awt.PGraphicsJava2D;
 import processing.core.PConstants;
 import processing.core.PGraphics;
@@ -17,6 +18,7 @@ import java.net.URL;
 @SuppressWarnings("unused")
 public class GraphicsFunctions {
     @ScarpetFunction
+    @Nullable
     public PImage load_image(String location) {
         try {
             try {
