@@ -24,15 +24,16 @@ Sometimes they may have slightly different names than the original Processing fu
 
 ### Graphics and Image functions
 
-#### `load_image(location)`
+#### `load_image(location, shared?)`
 
 Loads an image from the specified `location` (string).
-Can be a URL, or file path (absolute path, does not work like scarpe's `read_file`)
+Can be a URL, or file name (path that works just like `read_file`).
+If `shared` is true, uses shared app storage.
 Returns an `image` value.
 
-#### `save_image(image, location)`
+#### `save_image(image, location, shared?)`
 
-Saves the `image` in the specified `location` (also an absolute path)
+Saves the `image` in the specified `location` (works like `load_image`)
 
 #### `create_graphics(width, height)`
 
@@ -66,7 +67,7 @@ See the [2D Primitives](https://processing.org/reference/#shape) section in the 
 #### `draw_rect(graphics, a, b, c, d)`
 #### `draw_ellipse(graphics, a, b, c, d)`
 #### `draw_line(graphics, x1, y1, x2, y2)`
-#### `draw_image(graphics, a, b, c, d)`
+#### `draw_image(graphics, image, a, b, c, d)`
 #### `draw_text(graphics, text, x, y)`
 
 ### Mode functions

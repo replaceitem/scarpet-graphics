@@ -3,6 +3,7 @@
     "package": "net.replaceitem.scarpet.graphics.mixins",
     "compatibilityLevel": "JAVA_25",
     "mixins": [
+        "PAppletMixin",
         "PGraphicsAccessor",
         "PGraphicsMixin"
     ],
